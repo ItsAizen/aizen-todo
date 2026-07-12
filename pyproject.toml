@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aizen-todo"
+version = "2.0.0"
+description = "A beautiful CLI todo manager for programmers and entrepreneurs"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["todo", "cli", "productivity", "task-manager", "terminal"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Office/Business :: Scheduling",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "rich>=13.0",
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pylint"]
+
+authors = [
+    {name = "Mehrdad Ansarifar"},
+]
+
+[project.urls]
+Homepage = "https://github.com/ItsAizen/aizen-todo"
+Repository = "https://github.com/ItsAizen/aizen-todo"
+Issues = "https://github.com/ItsAizen/aizen-todo/issues"
+
+[project.scripts]
+aizen-todo = "aizen_todo.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["aizen_todo*"]
