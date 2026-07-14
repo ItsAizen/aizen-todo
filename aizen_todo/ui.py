@@ -17,11 +17,8 @@ from aizen_todo.data import get_stats, load_tasks
 
 console = Console()
 
-
-# ----- helpers -----
 def get_term_width():
     return shutil.get_terminal_size((80, 24)).columns
-
 
 def centered(text):
     term = get_term_width()
@@ -32,7 +29,6 @@ def centered(text):
         padding = max(0, (term - len(stripped)) // 2)
         centered_lines.append(" " * padding + stripped)
     return "\n".join(centered_lines)
-
 
 def section_title(text, style="bold bright_cyan"):
     rule = Rule(style="bright_blue")
@@ -307,3 +303,4 @@ def show_dashboard():
     console.print()
     console.print(Align.center(SHORTCUTS))
     console.print()
+# Done
