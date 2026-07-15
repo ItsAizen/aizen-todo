@@ -23,7 +23,7 @@ def screen_add_task():
 
     title = Prompt.ask("[bold]Title[/bold]")
     if not title:
-        console.print(Align.center("[red]Title cannot be empty![/red]"))
+        console.print(Align.center("[red]Enter a title![/red]"))
         pause()
         return
 
@@ -73,7 +73,6 @@ def screen_add_task():
     ))
     pause()
 
-
 def screen_mark_task():
     transition()
     tasks = load_tasks()
@@ -110,7 +109,6 @@ def screen_mark_task():
     except ValueError:
         console.print(Align.center("[red]Invalid input.[/red]"))
     pause()
-
 
 def screen_edit_task():
     transition()
@@ -176,7 +174,6 @@ def screen_edit_task():
         console.print(Align.center("[red]Invalid input.[/red]"))
     pause()
 
-
 def screen_delete_task():
     transition()
     tasks = load_tasks()
@@ -237,7 +234,6 @@ def screen_filter_category():
         console.print(Align.center(f"[yellow]No tasks in '[bold]{cat}[/bold]'.[/yellow]"))
     pause()
 
-
 def screen_filter_priority():
     transition()
     tasks = load_tasks()
@@ -269,7 +265,6 @@ def screen_filter_priority():
         console.print(Align.center("[red]Invalid input.[/red]"))
     pause()
 
-
 def screen_filter_status():
     transition()
     tasks = load_tasks()
@@ -296,7 +291,6 @@ def screen_filter_status():
         console.print(Align.center("[red]Invalid status.[/red]"))
     pause()
 
-
 def screen_search():
     transition()
     tasks = load_tasks()
@@ -321,7 +315,6 @@ def screen_search():
     else:
         console.print(Align.center(f"[yellow]No tasks matching '[bold]{query}[/bold]'.[/yellow]"))
     pause()
-
 
 def screen_overdue():
     transition()
@@ -379,7 +372,6 @@ def interactive_menu():
     while True:
         show_dashboard()
         choice = Prompt.ask("[bold]Choice[/bold]").strip().lower()
-
         action_map = {
             "1": screen_add_task, "a": screen_add_task,
             "2": screen_mark_task, "t": screen_mark_task,
