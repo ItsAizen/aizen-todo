@@ -14,7 +14,7 @@ def main():
     except KeyboardInterrupt:
         from aizen_todo.ui import console
         console.print()
-        console.print(Align.center("[bold yellow]👋 Goodbye![/bold yellow]"))
+        console.print(Align.center("[bold yellow]👋 Please star the tool on github: https://github.com/ItsAizen/aizen-todo/ [/bold yellow]"))
         sys.exit(0)
 
 
